@@ -75,7 +75,7 @@ in {
       default = false;
       description = ''
         Install optional runtime dependencies used by the bundled applets:
-          acpi (battery), light (brightness), mpd + mpc (music),
+          acpi (battery), mpd + mpc (music),
           maim + xrandr (screenshot), dunst (notifications), xclip (clipboard),
           alsa-utils / pavucontrol (volume), polkit (run-as-root applet).
       '';
@@ -543,7 +543,7 @@ in {
         home.packages = with pkgs;
           [ rofi launcherCmd powerMenuCmd ]
           ++ optionals cfg.withOptionalDeps [
-            acpi light mpd mpc maim xorg.xrandr
+            acpi mpd mpc maim xorg.xrandr
             dunst xclip alsa-utils pavucontrol polkit
           ]
           ++ cfg.extraPackages;

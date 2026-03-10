@@ -25,7 +25,6 @@
             # Optional runtime dependencies for full functionality
             pkexec
             acpi
-            light
             mpd
             mpc
             maim
